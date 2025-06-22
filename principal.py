@@ -101,10 +101,10 @@ def createconfig(page: ft.Page , atras):
             )
         ],
         # Configuración del Column principal
-        horizontal_alignment=ft.CrossAxisAlignment.START, # Alinea los hijos del Column a la izquierda horizontalmente
-        alignment=ft.MainAxisAlignment.START,           # Alinea los hijos del Column al inicio (arriba) verticalmente
-        spacing=0, # Ajusta el espaciado entre los elementos del Column si no quieres el espaciado predeterminado
-        expand=True # Haz que el Column se expanda para llenar el espacio disponible en la página
+        horizontal_alignment=ft.CrossAxisAlignment.START,
+        alignment=ft.MainAxisAlignment.START,          
+        spacing=0, 
+        expand=True 
     )
     
     
