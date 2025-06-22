@@ -53,7 +53,7 @@ def get_mp3_info(mp3_file_path: str) -> dict:
     info = {
         'artist': None,
         'cover_image_data': None,
-        'cover_mime_type': None # Por si necesitas saber si es JPEG o PNG
+        'cover_mime_type': None 
     }
     file_path = Path(mp3_file_path)
 
@@ -71,12 +71,12 @@ def get_mp3_info(mp3_file_path: str) -> dict:
         audio = MP3(file_path)
         print(audio.tags.keys() , " -+-+-+-12")
 
-        # --- Obtener el artista (TPE1 es la etiqueta ID3 para "Artist") ---
+
         if 'TPE1' in audio.tags:
             info['artist'] = str(audio.tags['TPE1'])
             print(f"Artista encontrado para {file_path.name}: {info['artist']}")
         
-        # --- Obtener la imagen de portada (APIC es la etiqueta ID3 para "Attached Picture") ---
+
         if 'APIC:' in audio.tags:
             apic_frame = audio.tags['APIC:']
             info['cover_image_data'] = apic_frame.data
