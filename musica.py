@@ -12,11 +12,11 @@ def build_music_card(song_info: dict):
 
     
     #head = createheader()
-    # Contenido de la tarjeta: Título, Artista y Botón de Play
+    # Contenido de la tarjeta: Título, Artista y Botn
     row_content = ft.Row(
         
         [
-            ft.Column( # Columna para el texto (Título y Artista)
+            ft.Column( 
                 [
                     ft.Text(
                         song_title,
@@ -38,11 +38,11 @@ def build_music_card(song_info: dict):
             ),
             ft.Button( 
                 "Play ▶️",
-                on_click=lambda e: print(f"Reproduciendo: {song_path}") # Lógica de reproducción aquí
+                on_click=lambda e: print(f"Reproduciendo: {song_path}") # agreagr despues la logica , por mientras msj simbolico
             ),
         ],
-        alignment=ft.MainAxisAlignment.START, # Alinea los elementos al inicio (izquierda)
-        vertical_alignment=ft.CrossAxisAlignment.CENTER, # Centra verticalmente los elementos en la fila
+        alignment=ft.MainAxisAlignment.START, 
+        vertical_alignment=ft.CrossAxisAlignment.CENTER,
         spacing=10,
         
         #padding=10,
@@ -61,7 +61,7 @@ def build_music_card(song_info: dict):
         margin=ft.margin.only(bottom=10) 
     )
 
-# --- La función principal que se pasa a ft.app ---
+
 def main_app_view(page: ft.Page):
     # Configuración de la página
     
